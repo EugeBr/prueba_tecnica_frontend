@@ -29,13 +29,13 @@
 
                         <div class="input-field">
                             <select required name="opciones" id="opciones">
-                                <option value="" disabled selected>Seleccione uno</option>
+                                <option disabled selected>Seleccione uno</option>
                             </select>
                         </div>
 
                         <div class="input-field">
                             <label>Monto de deuda</label>
-                            <input type="number" min="4000" placeholder="4000 € o más" required>
+                            <input type="number" id="monto" min="4000" placeholder="4000 € o más" required>
                         </div>
 
                     </div>
@@ -55,28 +55,28 @@
 
                     <div class="input-field">
                         <label>Nombre</label>
-                        <input type="text" required>
+                        <input type="text" id="nombre" required>
                     </div>
 
                     <div class="input-field">
                         <label>Apellido paterno</label>
-                        <input type="text" required>
+                        <input type="text" id="apellPater" required>
                     </div>
 
                     <div class="input-field">
                         <label>Apellido materno</label>
-                        <input type="text" required>
+                        <input type="text" id="apellMater" required>
                     </div>
 
                     <div class="input-field">
                         <label>Teléfono</label>
-                        <input type="tel" minlength="9" maxlength="9" required>
+                        <input type="tel" id="tel" minlength="9" maxlength="9" required>
                     </div>
 
                     <div class="fields">
                         <div class="input-field">
                             <label>Correo electrónico</label>
-                            <input type="email" required>
+                            <input type="email" id="correo" required>
                         </div>
 
                     </div>

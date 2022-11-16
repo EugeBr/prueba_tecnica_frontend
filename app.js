@@ -14,7 +14,7 @@ function cargarOpciones() {
     let opciones = document.getElementById('opciones')
     let opcionSeleccionada = instituciones.value
 
-    opciones.innerHTML = '<option value="" disabled selected>Seleccione uno</option>'
+    opciones.innerHTML = '<option disabled selected>Seleccione uno</option>'
 
     if (opcionSeleccionada !== '') {
         opcionSeleccionada = listaOpciones[opcionSeleccionada]
@@ -30,15 +30,20 @@ function cargarOpciones() {
 
 function submitForm() {
     let myForm = document.getElementById('registro').elements;
-    //localStorage.clear();
+    console.log(myForm)
+    localStorage.clear();
     for (let i = 0; i <= myForm.length - 1; i++) {
         console.log(myForm[i].value);
         localStorage.setItem(myForm[i].id, JSON.stringify(myForm[i].value));
     }
-    console.log(localStorage);
+    //console.log(localStorage);
 }
 
-submitButton.addEventListener('click', () => submitForm());
+submitButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    submitForm();
+});
+
 
 nextBtn.addEventListener("click", ()=> {
     allInput.forEach(input => {
