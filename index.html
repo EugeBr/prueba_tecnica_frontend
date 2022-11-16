@@ -10,7 +10,53 @@
 </head>
 
 <body>
+    <div class="container">
+        <header>Registro</header>
+        <form action="#">
+            <div class="primer paso">
+                <div class="detalles deuda">
+                    <span class="title">Detalles de deuda</span>
 
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Bancos</label>
+                            <select required>
+                                <option disabled selected>Seleccione banco</option>
+                                <option>CaixaBank</option>
+                                <option>ING</option>
+                                <option>BBVA</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Financieras</label>
+                            <select required>
+                                <option disabled selected>Seleccione financiera</option>
+                                <option>Vivus</option>
+                                <option>Moneyman</option>
+                                <option>Wenance</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Monto de deuda</label>
+                            <input type="number" required>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div>
+                    <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div>
+            </div>
+    </div>
+    </form>
+
+    </div>
 
     <script src="app.js"></script>
 </body>
