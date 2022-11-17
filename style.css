@@ -44,6 +44,12 @@ body{
     background-color: #4482d0;
 }
 
+.container form .form{
+    position: absolute;
+    background-color: #fff;
+    transition: 0.3s ease;
+}
+
 form.secActive .form.second{
     opacity: 1;
     pointer-events: auto;
@@ -53,4 +59,43 @@ form.secActive .form.first{
     opacity: 0;
     pointer-events: none;
     transform: translateX(-100%);
+}
+
+.container form button, .backBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 25px 0;
+    background-color: #4482d0;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+.container form .btnText{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+form button:hover{
+    background-color: #145da5;
+}
+form button i,
+form .backBtn i{
+    margin: 0 6px;
+}
+form .backBtn i{
+    transform: rotate(180deg);
+}
+form .buttons{
+    display: flex;
+    align-items: center;
+}
+form .buttons button , .backBtn{
+    margin-right: 14px;
 }
