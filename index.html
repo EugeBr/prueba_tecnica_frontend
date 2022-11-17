@@ -11,8 +11,12 @@
 </head>
 
 <body>
+
     <div class="container">
-        <header>Registro</header>
+        <div class="head">
+            <header>Registro</header>
+            <img src="Logo_Resuelve_tu_Deuda.png" alt="logo" class="logo">
+        </div>
         <form action="#" id="registro">
             <div class="form first">
                 <div class="detalles deuda">
@@ -29,6 +33,7 @@
                         </div>
 
                         <div class="input-field">
+                            <label id="no-label">.</label>
                             <select required name="opciones" id="opciones">
                                 <option disabled selected>Seleccione uno</option>
                             </select>
@@ -54,27 +59,29 @@
                 <div class="datos personales">
                     <span class="title">Datos Personales</span>
 
-                    <div class="input-field">
-                        <label>Nombre</label>
-                        <input type="text" id="nombre" required>
-                    </div>
-
-                    <div class="input-field">
-                        <label>Apellido paterno</label>
-                        <input type="text" id="apellPater" required>
-                    </div>
-
-                    <div class="input-field">
-                        <label>Apellido materno</label>
-                        <input type="text" id="apellMater" required>
-                    </div>
-
-                    <div class="input-field">
-                        <label>Teléfono</label>
-                        <input type="tel" id="tel" minlength="9" maxlength="9" required>
-                    </div>
-
                     <div class="fields">
+                        <div class="input-field">
+                            <label>Nombre</label>
+                            <input type="text" id="nombre" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Apellido paterno</label>
+                            <input type="text" id="apellPater" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Apellido materno</label>
+                            <input type="text" id="apellMater" required>
+                        </div>
+                    </div>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Teléfono</label>
+                            <input type="tel" id="tel" minlength="9" maxlength="9" required>
+                        </div>
+
+
                         <div class="input-field">
                             <label>Correo electrónico</label>
                             <input type="email" id="correo" required>

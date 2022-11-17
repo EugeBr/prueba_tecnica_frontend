@@ -31,6 +31,8 @@ body{
     font-size: 20px;
     font-weight: 600;
     color: #333;
+    margin-top: 20px;
+    margin-bottom: 20px;;
 }
 
 .container header::before{
@@ -44,10 +46,26 @@ body{
     background-color: #4482d0;
 }
 
+.logo{
+    height: 70px;
+    position: relative;
+    z-index: 1;
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+}
+
 .container form .form{
     position: absolute;
     background-color: #fff;
     transition: 0.3s ease;
+}
+
+.container form .form.first{
+    height: 70%;
+    width: 95%;
 }
 
 form.secActive .form.second{
@@ -59,6 +77,43 @@ form.secActive .form.first{
     opacity: 0;
     pointer-events: none;
     transform: translateX(-100%);
+}
+
+.container form .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+form .fields .input-field{
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+
+.input-field label{
+    font-size: 14px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+
+.input-field input, select{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+
+#no-label{
+    color: #fff;
 }
 
 .container form button, .backBtn{
