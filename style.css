@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -15,7 +15,7 @@ body{
     background: #7caae5;
 }
 
-.container{
+.container {
     position: relative;
     max-width: 900px;
     width: 100%;
@@ -23,19 +23,20 @@ body{
     padding: 30px;
     margin: 0 15px;
     background-color: #fff;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.container header{
+.container header {
     position: relative;
     font-size: 20px;
     font-weight: 600;
     color: #333;
     margin-top: 20px;
-    margin-bottom: 20px;;
+    margin-bottom: 20px;
+    ;
 }
 
-.container header::before{
+.container header::before {
     content: "";
     position: absolute;
     left: 0;
@@ -46,61 +47,63 @@ body{
     background-color: #4482d0;
 }
 
-.logo{
+.logo {
     height: 70px;
     position: relative;
     z-index: 1;
 }
 
-.head{
+.head {
     display: flex;
     justify-content: space-between;
 }
 
-.container form .form{
+.container form .form {
     position: absolute;
     background-color: #fff;
     transition: 0.3s ease;
 }
 
-.container form .form.first{
+.container form .form.first {
     height: 70%;
     width: 95%;
 }
 
-form.secActive .form.second{
+form.secActive .form.second {
     opacity: 1;
     pointer-events: auto;
     transform: translateX(0);
 }
-form.secActive .form.first{
+
+form.secActive .form.first {
     opacity: 0;
     pointer-events: none;
     transform: translateX(-100%);
 }
 
-.container form .fields{
+.container form .fields {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 20px;
 }
 
-form .fields .input-field{
+form .fields .input-field {
     display: flex;
     width: calc(100% / 3 - 15px);
     flex-direction: column;
     margin: 4px 0;
 }
 
-.input-field label{
+.input-field label {
     font-size: 14px;
     font-weight: 500;
     color: #2e2e2e;
 }
 
-.input-field input, select{
+.input-field input,
+select {
     outline: none;
     font-size: 14px;
     font-weight: 400;
@@ -112,11 +115,12 @@ form .fields .input-field{
     margin: 8px 0;
 }
 
-#no-label{
+#no-label {
     color: #fff;
 }
 
-.container form button, .backBtn{
+.container form button,
+.backBtn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -132,25 +136,41 @@ form .fields .input-field{
     transition: all 0.3s linear;
     cursor: pointer;
 }
-.container form .btnText{
+
+.container form .btnText {
     font-size: 14px;
     font-weight: 400;
 }
 
-form button:hover{
+form button:hover {
     background-color: #145da5;
 }
+
 form button i,
-form .backBtn i{
+form .backBtn i {
     margin: 0 6px;
 }
-form .backBtn i{
+
+form .backBtn i {
     transform: rotate(180deg);
 }
-form .buttons{
+
+form .buttons {
     display: flex;
     align-items: center;
 }
-form .buttons button , .backBtn{
+
+form .buttons button,
+.backBtn {
     margin-right: 14px;
+}
+
+.error {
+    color: #d85b5b;
+}
+
+.invalid {
+    border-style: "solid";
+    border-width: "3px";
+    border-color: "#DB2C2C";
 }

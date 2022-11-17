@@ -20,13 +20,13 @@
         <form action="#" id="registro">
             <div class="form first">
                 <div class="detalles deuda">
-                    <span class="title">Detalles de deuda</span>
+                    <span class="title">Detalles de tu deuda</span>
 
                     <div class="fields">
                         <div class="input-field">
                             <label>Instituciones</label>
                             <select required name="instituciones" id="instituciones" onchange="cargarOpciones();">
-                                <option disabled selected>Seleccione tipo de institución</option>
+                                <option disabled selected value="">Seleccione tipo de institución</option>
                                 <option value="bancos">Bancos</option>
                                 <option value="financieras">Financieras</option>
                             </select>
@@ -35,7 +35,7 @@
                         <div class="input-field">
                             <label id="no-label">.</label>
                             <select required name="opciones" id="opciones">
-                                <option disabled selected>Seleccione uno</option>
+                                <option disabled selected value="">Seleccione uno</option>
                             </select>
                         </div>
 
@@ -45,6 +45,10 @@
                         </div>
 
                     </div>
+                </div>
+
+                <div id="error-message" class="error" hidden>
+                    <p>Completa todos los campos para continuar</p>
                 </div>
 
                 <div>
@@ -62,17 +66,17 @@
                     <div class="fields">
                         <div class="input-field">
                             <label>Nombre</label>
-                            <input type="text" id="nombre" required>
+                            <input type="text" id="nombre" required pattern="[A-Za-z].{2,}">
                         </div>
 
                         <div class="input-field">
                             <label>Apellido paterno</label>
-                            <input type="text" id="apellPater" required>
+                            <input type="text" id="apellPater" required pattern="[A-Za-z].{2,}">
                         </div>
 
                         <div class="input-field">
                             <label>Apellido materno</label>
-                            <input type="text" id="apellMater" required>
+                            <input type="text" id="apellMater" required pattern="[A-Za-z].{2,}">
                         </div>
                     </div>
                     <div class="fields">
@@ -84,10 +88,14 @@
 
                         <div class="input-field">
                             <label>Correo electrónico</label>
-                            <input type="email" id="correo" required>
+                            <input type="email" id="correo" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                         </div>
 
                     </div>
+                </div>
+
+                <div id="second-error-message" class="error" hidden>
+                    <p>Completa todos los campos para continuar</p>
                 </div>
 
                 <div class="buttons">
@@ -96,7 +104,7 @@
                         <span class="btnText">Atras</span>
                     </button>
 
-                    <button class="sumbit" id="submit">
+                    <button type="submit" class="sumbit" id="submit">
                         <span class="btnText">Registrar</span>
                         <i class="uil uil-navigator"></i>
                     </button>
