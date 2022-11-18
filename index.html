@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title>Resuelve tu Deuda Prueba Técnica</title>
 </head>
-
 <body>
-
     <div class="container">
         <div class="head">
             <header>Registro</header>
@@ -21,7 +19,6 @@
             <div class="form first">
                 <div class="detalles deuda">
                     <span class="title">Detalles de tu deuda</span>
-
                     <div class="fields">
                         <div class="input-field">
                             <label>Instituciones</label>
@@ -31,26 +28,21 @@
                                 <option value="financieras">Financieras</option>
                             </select>
                         </div>
-
                         <div class="input-field">
                             <label id="no-label">.</label>
                             <select required name="opciones" id="opciones">
                                 <option disabled selected value="">Seleccione uno</option>
                             </select>
                         </div>
-
                         <div class="input-field">
                             <label>Monto de deuda</label>
                             <input type="number" id="monto" min="4000" placeholder="4000 € o más" required>
                         </div>
-
                     </div>
                 </div>
-
                 <div id="error-message" class="error" hidden>
                     <p>Completa todos los campos para continuar</p>
                 </div>
-
                 <div>
                     <button class="nextBtn">
                         <span class="btnText">Siguiente</span>
@@ -58,22 +50,18 @@
                     </button>
                 </div>
             </div>
-
             <div class="second">
                 <div class="datos personales">
                     <span class="title">Datos Personales</span>
-
                     <div class="fields">
                         <div class="input-field">
                             <label>Nombre</label>
                             <input type="text" id="nombre" required pattern="[A-Za-z].{2,}">
                         </div>
-
                         <div class="input-field">
                             <label>Apellido paterno</label>
                             <input type="text" id="apellPater" required pattern="[A-Za-z].{2,}">
                         </div>
-
                         <div class="input-field">
                             <label>Apellido materno</label>
                             <input type="text" id="apellMater" required pattern="[A-Za-z].{2,}">
@@ -84,26 +72,20 @@
                             <label>Teléfono</label>
                             <input type="tel" id="tel" minlength="9" maxlength="9" required>
                         </div>
-
-
                         <div class="input-field">
                             <label>Correo electrónico</label>
                             <input type="email" id="correo" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                         </div>
-
                     </div>
                 </div>
-
                 <div id="second-error-message" class="error" hidden>
                     <p>Completa todos los campos para continuar</p>
                 </div>
-
                 <div class="buttons">
                     <button class="backBtn">
                         <i class="uil uil-navigator"></i>
                         <span class="btnText">Atras</span>
                     </button>
-
                     <button type="submit" class="sumbit" id="submit">
                         <span class="btnText">Registrar</span>
                         <i class="uil uil-navigator"></i>
@@ -111,10 +93,7 @@
                 </div>
             </div>
         </form>
-
     </div>
-
-    <script src="app.js"></script>
+    <script src="index.js"></script>
 </body>
-
 </html>

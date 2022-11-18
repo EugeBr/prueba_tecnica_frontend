@@ -174,3 +174,9 @@ form .buttons button,
     border-width: "3px";
     border-color: "#DB2C2C";
 }
+
+.final-message{
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 22px;
+}

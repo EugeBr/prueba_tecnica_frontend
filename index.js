@@ -51,29 +51,26 @@ nextBtn.addEventListener("click", () => {
 backBtn.addEventListener("click", () => form.classList.remove('secActive'));
 
 const emailIsValid = (email) => {
-    //validates that the input is an email address
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  };
+};
 
 function submitForm() {
-    //console.log(myForm)
     if (nombreInput.value != "" &&
         apellidopInput.value != "" &&
         apellidomInput.value != "" &&
         telInput.value != "" &&
         emailIsValid(correoInput.value) &&
         correoInput.value != "") {
-            document.getElementById("second-error-message").hidden = true;
-            localStorage.clear();
-            for (let i = 0; i <= myForm.length - 1; i++) {
-                console.log(myForm[i].value);
+        document.getElementById("second-error-message").hidden = true;
+        localStorage.clear();
+        for (let i = 0; i <= myForm.length - 1; i++) {
+            console.log(myForm[i].value);
             localStorage.setItem(myForm[i].id, JSON.stringify(myForm[i].value));
         }
-        alert('Los datos han sido registrados correctamente');
+        location.href = "form-sent.html";
         console.log(localStorage);
     } else {
         document.getElementById("second-error-message").hidden = false;
-        //alert('campos incompletos');
     }
 }
 
