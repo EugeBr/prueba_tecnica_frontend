@@ -169,14 +169,40 @@ form .buttons button,
     color: #d85b5b;
 }
 
-.invalid {
-    border-style: "solid";
-    border-width: "3px";
-    border-color: "#DB2C2C";
+.final-message{
+    text-align: center;
 }
 
-.final-message{
+.final-message p{
     text-align: center;
     padding: 2rem 0;
     font-size: 22px;
+}
+
+.back{
+    text-decoration: none;
+    color: #fff;
+}
+
+.returnBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #4482d0;
+    cursor: pointer;
+}
+
+.returnBtn:hover {
+    background-color: #145da5;
+}
+
+.retnBtnText{
+    font-size: 16px;
+    font-weight: 400;
 }
